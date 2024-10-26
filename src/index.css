@@ -1,0 +1,120 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 100px;
+  margin-right: 100px;
+}
+
+.logo-text h1 {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+}
+
+.logo-text p {
+  margin: 0;
+  font-size: 12px;
+  color: #666;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px; /* Adjusted gap for more spacing between nav items */
+  align-items: center;
+}
+
+.nav-item {
+  text-decoration: none;
+  color: #666;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.nav-item:hover {
+  color: #000;
+}
+
+.dropdown {
+  position: relative;
+  margin-left: 20px; /* Add margin-left to separate from the logo */
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  list-style: none;
+  padding: 10px; /* Padding around the dropdown menu */
+  margin: 0;
+  width: 200px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-menu li {
+  padding: 10px 0; /* Added padding for items in the dropdown */
+}
+
+.dropdown-menu li a {
+  text-decoration: none;
+  color: #666;
+  font-size: 14px;
+}
+
+.dropdown-menu li a:hover {
+  color: #000;
+}
+
+.contact-button {
+  margin-left: auto; /* Ensures this button is aligned to the right */
+}
+
+.whatsapp-button {
+  background-color: #25d366;
+  color: white;
+  padding: 10px 20px; /* Adjusted padding for button */
+  border: none;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.whatsapp-button i {
+  margin-right: 10px;
+}
+
+.whatsapp-button:hover {
+  background-color: #1ebe57;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px; /* Adjusted gap for mobile layout */
+    margin-top: 10px; /* Added margin on top for better spacing */
+  }
+
+  .contact-button {
+    margin-top: 10px; /* Ensure this is spaced from the nav links */
+  }
+}

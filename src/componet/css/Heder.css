@@ -1,0 +1,10 @@
+.nav a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  transition: color 0.3s ease; /* Smooth transition */
+}
+
+.nav a:hover {
+  color: #00ff00; /* Change text color on hover */
+}

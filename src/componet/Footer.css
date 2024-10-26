@@ -1,0 +1,107 @@
+/* Buat kontainer seluruh halaman menggunakan Flexbox */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Set tinggi minimum viewport */
+  margin: 0;
+}
+
+.main-content {
+  flex: 1; /* Membuat konten utama fleksibel untuk mengisi ruang */
+}
+
+.footer {
+  background-color: #979494; /* Dark background */
+  color: #ffffff; /* White text color */
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-logo {
+  width: 30%;
+}
+
+.logo-image {
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+.footer-description {
+  color: #ffffff;
+  font-size: 0.9rem;
+}
+
+.footer-links,
+.footer-contact,
+.footer-hours {
+  width: 20%;
+}
+
+.footer-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #3ed343; /* Green accent to match the logo */
+}
+
+.footer-links ul,
+.footer-contact ul,
+.footer-hours ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li,
+.footer-contact li,
+.footer-hours li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.footer-links a:hover {
+  color: #0fca09; /* Hover effect with green color */
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  color: #ffffff;
+}
+
+.footer-bottom a {
+  color: #f4e047;
+  text-decoration: none;
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+  }
+
+  .footer-logo,
+  .footer-links,
+  .footer-contact,
+  .footer-hours {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}

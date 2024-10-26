@@ -1,0 +1,100 @@
+.carousel-container {
+  margin: 0 auto; /* Hilangkan margin atas */
+  margin-bottom: 0; /* Tetap gunakan margin bawah jika diperlukan */
+  overflow-x: auto; /* Mengizinkan scroll horizontal jika item terlalu banyak */
+  padding: 0; /* Hapus padding jika ada */
+}
+
+.carousel-products {
+  display: flex;
+  justify-content: flex-start; /* Selalu tampilkan item secara horizontal */
+  gap: 10px; /* Jarak antar item */
+}
+
+.carousel-item {
+  flex: 0 0 30%; /* Di layar besar, setiap item mengambil 30% lebar */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-left: 2.4%;
+}
+
+.product-image {
+  width: 100%;
+  max-width: 100%; /* Gambar akan mengambil lebar penuh dari container */
+  height: auto; /* Menjaga proporsi gambar */
+  margin-left: 0; /* Hapus margin kiri agar gambar tetap di tengah */
+  object-fit: contain; /* Membuat gambar tetap rapi dalam kotaknya */
+}
+
+.productsepek {
+  width: 10px;
+}
+/* Responsif di layar tablet dan kecil */
+@media (max-width: 800px) {
+  .carousel-item {
+    flex: 0 0 auto; /* Mengizinkan item berukuran otomatis di layar kecil */
+  }
+
+  .carousel-products {
+    overflow-x: scroll; /* Tambahkan scroll horizontal di layar kecil */
+    scroll-snap-type: x mandatory; /* Membuat scrolling lebih smooth */
+  }
+
+  .carousel-item {
+    scroll-snap-align: center; /* Setiap item akan berhenti di tengah saat discroll */
+  }
+
+  .product-image {
+    max-width: 80%; /* Gambar mengambil 80% lebar container di layar tablet */
+  }
+}
+
+/* Responsif untuk layar lebih kecil (max-width 500px) */
+@media (max-width: 500px) {
+  .product-image {
+    max-width: 60%; /* Gambar mengambil 60% lebar container di perangkat mobile */
+  }
+}
+@media (max-width: 428px) {
+  .carousel-products {
+    overflow-x: scroll;
+    top: 0;
+    bottom: 0;
+    height: 10%;
+    gap: 0px; /* Kurangi jarak antar item di layar sangat kecil */
+  }
+
+  .carousel-item {
+    flex: 0 0 auto;
+    scroll-snap-align: center;
+    width: 100%;
+  }
+
+  .product-image {
+    width: 100%;
+    height: 100%; /* Gambar mengambil 50% lebar di layar kecil */
+  }
+}
+/* Responsif untuk layar sangat kecil (max-width 300px) */
+@media (max-width: 360px) {
+  .carousel-products {
+    overflow-x: scroll;
+    top: 0;
+    bottom: 0;
+    height: 10%;
+    gap: 0px; /* Kurangi jarak antar item di layar sangat kecil */
+  }
+
+  .carousel-item {
+    flex: 0 0 auto;
+    scroll-snap-align: center;
+    width: 100%;
+  }
+
+  .product-image {
+    width: 100%;
+    height: 100%; /* Gambar mengambil 50% lebar di layar kecil */
+  }
+}

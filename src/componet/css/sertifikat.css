@@ -1,0 +1,26 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 20px;
+  gap: 10px; /* Tambahkan ini untuk mengontrol jarak antar kartu */
+  background-image: url("path/to/background-image.jpg"); /* Ganti dengan path background yang sesuai */
+  background-size: cover;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s;
+  margin: 10px; /* Atur margin lebih kecil jika perlu */
+}
+
+.card:hover {
+  transform: scale(1.05);
+}

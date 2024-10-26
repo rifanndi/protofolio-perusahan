@@ -1,0 +1,40 @@
+.carouselContainer {
+  width: 80%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease;
+  flex-wrap: nowrap;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  flex-shrink: 0;
+  margin: 0 5px;
+}
+
+/* Style untuk ukuran layar besar */
+@media screen and (min-width: 768px) {
+  .card {
+    width: calc(33.333% - 10px); /* Tampilkan 3 kartu di layar besar */
+    margin: 0 10px;
+  }
+}
+
+/* Style untuk ukuran layar kecil (ponsel) */
+@media screen and (max-width: 428px) {
+  .card {
+    width: 100%; /* Tampilkan 1 kartu di layar kecil */
+    margin: 0;
+  }
+}

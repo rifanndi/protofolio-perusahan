@@ -1,0 +1,57 @@
+/* Styling for the stats container */
+.stats-container {
+  display: flex;
+  justify-content: space-around; /* Distribute the items evenly */
+  align-items: center; /* Align the items vertically */
+  padding: 50px 0;
+  background-color: #fff;
+  text-align: center;
+}
+
+.stat-item {
+  flex: 1;
+  margin: 0 15px;
+}
+
+.stat-item p {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.stat-item span {
+  font-size: 48px;
+  font-weight: bold;
+  color: #4caf50; /* Green color */
+}
+
+/* Responsiveness for smaller screens */
+@media (max-width: 768px) {
+  .stats-container {
+    flex-direction: column; /* Stack the stats vertically */
+    padding: 30px 0;
+  }
+
+  .stat-item {
+    margin-bottom: 20px;
+  }
+
+  .stat-item span {
+    font-size: 36px;
+  }
+
+  .stat-item p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .stat-item span {
+    font-size: 32px;
+  }
+
+  .stat-item p {
+    font-size: 14px;
+  }
+}

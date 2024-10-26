@@ -1,0 +1,15 @@
+@media (max-width: 360px) {
+  .pidioyt {
+    width: 80%;
+    height: 8;
+    border-radius: 10%;
+  }
+}
+
+@media (max-width: 428px) {
+  .pidioyt {
+    width: 80%;
+    height: 8;
+    border-radius: 10%;
+  }
+}
